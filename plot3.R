@@ -1,3 +1,7 @@
+## This first line will likely take a few seconds. Be patient!
+if(!exists("NEI")){
+  NEI <- readRDS("./data/summarySCC_PM25.rds")
+}
 if(!exists("SCC")){
   SCC <- readRDS("./data/Source_Classification_Code.rds")
 }
@@ -22,3 +26,5 @@ g <- g + geom_line() +
   xlab("year") +
   ylab(expression('Total PM'[2.5]*" Emissions")) +
   ggtitle('Total Emissions in Baltimore City, Maryland (fips == "24510") from 1999 to 2008')
+print(g)
+dev.off()
